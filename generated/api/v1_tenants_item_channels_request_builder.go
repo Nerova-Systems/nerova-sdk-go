@@ -68,6 +68,11 @@ func (m *V1TenantsItemChannelsRequestBuilder) ToGetRequestInformation(ctx contex
     requestInfo.Headers.TryAdd("Accept", "application/json")
     return requestInfo, nil
 }
+// Whatsapp the whatsapp property
+// returns a *V1TenantsItemChannelsWhatsappRequestBuilder when successful
+func (m *V1TenantsItemChannelsRequestBuilder) Whatsapp()(*V1TenantsItemChannelsWhatsappRequestBuilder) {
+    return NewV1TenantsItemChannelsWhatsappRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
 // WithUrl returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
 // returns a *V1TenantsItemChannelsRequestBuilder when successful
 func (m *V1TenantsItemChannelsRequestBuilder) WithUrl(rawUrl string)(*V1TenantsItemChannelsRequestBuilder) {

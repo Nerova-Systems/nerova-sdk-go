@@ -189,6 +189,11 @@ func (m *V1TenantsWithTenantItemRequestBuilder) Usage()(*V1TenantsItemUsageReque
 func (m *V1TenantsWithTenantItemRequestBuilder) Webhooks()(*V1TenantsItemWebhooksRequestBuilder) {
     return NewV1TenantsItemWebhooksRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
+// Widgets the widgets property
+// returns a *V1TenantsItemWidgetsRequestBuilder when successful
+func (m *V1TenantsWithTenantItemRequestBuilder) Widgets()(*V1TenantsItemWidgetsRequestBuilder) {
+    return NewV1TenantsItemWidgetsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
+}
 // WithUrl returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
 // returns a *V1TenantsWithTenantItemRequestBuilder when successful
 func (m *V1TenantsWithTenantItemRequestBuilder) WithUrl(rawUrl string)(*V1TenantsWithTenantItemRequestBuilder) {
