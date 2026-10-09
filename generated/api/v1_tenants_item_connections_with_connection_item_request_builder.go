@@ -13,11 +13,6 @@ import (
 type V1TenantsItemConnectionsWithConnectionItemRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// BaseUrl the baseUrl property
-// returns a *V1TenantsItemConnectionsItemBaseUrlRequestBuilder when successful
-func (m *V1TenantsItemConnectionsWithConnectionItemRequestBuilder) BaseUrl()(*V1TenantsItemConnectionsItemBaseUrlRequestBuilder) {
-    return NewV1TenantsItemConnectionsItemBaseUrlRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // NewV1TenantsItemConnectionsWithConnectionItemRequestBuilderInternal instantiates a new V1TenantsItemConnectionsWithConnectionItemRequestBuilder and sets the default values.
 func NewV1TenantsItemConnectionsWithConnectionItemRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*V1TenantsItemConnectionsWithConnectionItemRequestBuilder) {
     m := &V1TenantsItemConnectionsWithConnectionItemRequestBuilder{
@@ -103,11 +98,6 @@ func (m *V1TenantsItemConnectionsWithConnectionItemRequestBuilder) Get(ctx conte
         return nil, nil
     }
     return res.(i488a15aa72bd1f794ae831fc9b44254a73a22e33a434b197990b2cb1206fb36e.TenantV1ConnectionResponseable), nil
-}
-// Test the test property
-// returns a *V1TenantsItemConnectionsItemTestRequestBuilder when successful
-func (m *V1TenantsItemConnectionsWithConnectionItemRequestBuilder) Test()(*V1TenantsItemConnectionsItemTestRequestBuilder) {
-    return NewV1TenantsItemConnectionsItemTestRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // ToDeleteRequestInformation revokes the connection and fails closed: dependent work stops immediately and the activation manifest reports the gap in blockingReasons. The revoked connection is a tombstone, not a lock: a later create for the same provider and environment resurrects it in place with the new payload.
 // returns a *RequestInformation when successful

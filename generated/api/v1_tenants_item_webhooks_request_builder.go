@@ -43,11 +43,6 @@ func NewV1TenantsItemWebhooksRequestBuilder(rawUrl string, requestAdapter i2ae41
     urlParams["request-raw-url"] = rawUrl
     return NewV1TenantsItemWebhooksRequestBuilderInternal(urlParams, requestAdapter)
 }
-// Deliveries the deliveries property
-// returns a *V1TenantsItemWebhooksDeliveriesRequestBuilder when successful
-func (m *V1TenantsItemWebhooksRequestBuilder) Deliveries()(*V1TenantsItemWebhooksDeliveriesRequestBuilder) {
-    return NewV1TenantsItemWebhooksDeliveriesRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Get returns the tenant's webhook endpoints in the calling key's environment, newest first, with each endpoint's most recent delivery outcome. Signing secrets are masked.
 // returns a []TenantV1WebhookResponseable when successful
 // returns a ProblemDetails error when the service returns a 400 status code
@@ -114,11 +109,6 @@ func (m *V1TenantsItemWebhooksRequestBuilder) Post(ctx context.Context, body i48
         return nil, nil
     }
     return res.(i488a15aa72bd1f794ae831fc9b44254a73a22e33a434b197990b2cb1206fb36e.TenantV1WebhookResponseable), nil
-}
-// Stats the stats property
-// returns a *V1TenantsItemWebhooksStatsRequestBuilder when successful
-func (m *V1TenantsItemWebhooksRequestBuilder) Stats()(*V1TenantsItemWebhooksStatsRequestBuilder) {
-    return NewV1TenantsItemWebhooksStatsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // ToGetRequestInformation returns the tenant's webhook endpoints in the calling key's environment, newest first, with each endpoint's most recent delivery outcome. Signing secrets are masked.
 // returns a *RequestInformation when successful

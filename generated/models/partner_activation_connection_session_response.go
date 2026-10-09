@@ -11,8 +11,6 @@ import (
 type PartnerActivationConnectionSessionResponse struct {
     // The audience property
     audience *string
-    // The callbackPath property
-    callbackPath *string
     // The channel property
     channel *PartnerActivationChannel
     // The correlationId property
@@ -54,11 +52,6 @@ func CreatePartnerActivationConnectionSessionResponseFromDiscriminatorValue(pars
 func (m *PartnerActivationConnectionSessionResponse) GetAudience()(*string) {
     return m.audience
 }
-// GetCallbackPath gets the callbackPath property value. The callbackPath property
-// returns a *string when successful
-func (m *PartnerActivationConnectionSessionResponse) GetCallbackPath()(*string) {
-    return m.callbackPath
-}
 // GetChannel gets the channel property value. The channel property
 // returns a *PartnerActivationChannel when successful
 func (m *PartnerActivationConnectionSessionResponse) GetChannel()(*PartnerActivationChannel) {
@@ -85,16 +78,6 @@ func (m *PartnerActivationConnectionSessionResponse) GetFieldDeserializers()(map
         }
         if val != nil {
             m.SetAudience(val)
-        }
-        return nil
-    }
-    res["callbackPath"] = func (n i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.ParseNode) error {
-        val, err := n.GetStringValue()
-        if err != nil {
-            return err
-        }
-        if val != nil {
-            m.SetCallbackPath(val)
         }
         return nil
     }
@@ -273,12 +256,6 @@ func (m *PartnerActivationConnectionSessionResponse) Serialize(writer i878a80d23
             return err
         }
     }
-    {
-        err := writer.WriteStringValue("callbackPath", m.GetCallbackPath())
-        if err != nil {
-            return err
-        }
-    }
     if m.GetChannel() != nil {
         cast := (*m.GetChannel()).String()
         err := writer.WriteStringValue("channel", &cast)
@@ -359,10 +336,6 @@ func (m *PartnerActivationConnectionSessionResponse) Serialize(writer i878a80d23
 func (m *PartnerActivationConnectionSessionResponse) SetAudience(value *string)() {
     m.audience = value
 }
-// SetCallbackPath sets the callbackPath property value. The callbackPath property
-func (m *PartnerActivationConnectionSessionResponse) SetCallbackPath(value *string)() {
-    m.callbackPath = value
-}
 // SetChannel sets the channel property value. The channel property
 func (m *PartnerActivationConnectionSessionResponse) SetChannel(value *PartnerActivationChannel)() {
     m.channel = value
@@ -414,7 +387,6 @@ func (m *PartnerActivationConnectionSessionResponse) SetVersion(value *int64)() 
 type PartnerActivationConnectionSessionResponseable interface {
     i878a80d2330e89d26896388a3f487eef27b0a0e6c010c493bf80be1452208f91.Parsable
     GetAudience()(*string)
-    GetCallbackPath()(*string)
     GetChannel()(*PartnerActivationChannel)
     GetCorrelationId()(*string)
     GetExpiresAt()(*i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)
@@ -428,7 +400,6 @@ type PartnerActivationConnectionSessionResponseable interface {
     GetState()(*string)
     GetVersion()(*int64)
     SetAudience(value *string)()
-    SetCallbackPath(value *string)()
     SetChannel(value *PartnerActivationChannel)()
     SetCorrelationId(value *string)()
     SetExpiresAt(value *i336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e.Time)()

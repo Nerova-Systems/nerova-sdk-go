@@ -56,11 +56,6 @@ func (m *V1TenantsItemChannelsWhatsappRequestBuilder) Delete(ctx context.Context
     }
     return nil
 }
-// Onboarding the onboarding property
-// returns a *V1TenantsItemChannelsWhatsappOnboardingRequestBuilder when successful
-func (m *V1TenantsItemChannelsWhatsappRequestBuilder) Onboarding()(*V1TenantsItemChannelsWhatsappOnboardingRequestBuilder) {
-    return NewV1TenantsItemChannelsWhatsappOnboardingRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // ToDeleteRequestInformation disconnects the tenant's WhatsApp number from Nerova so the merchant can remove it or connect a different one. Nerova releases the number at Meta (a number paired with the WhatsApp Business App is left paired), deletes the stored WhatsApp account and its access token, and stops routing messages to the receptionist. Returns 204 with no body. A tenant with no WhatsApp number connected is rejected with 409 and code partner.whatsapp_not_connected. A Meta failure never blocks the disconnect: the connection is removed either way and the number may need to be released manually in Meta. Nerova publishes channel.disconnected with source api once the disconnect succeeds. Requires a Live key (nrv_live_) with the channel:manage scope; a tenant the calling key has not been granted is rejected with 403 and code partner.merchant_not_available.
 // returns a *RequestInformation when successful
 func (m *V1TenantsItemChannelsWhatsappRequestBuilder) ToDeleteRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {

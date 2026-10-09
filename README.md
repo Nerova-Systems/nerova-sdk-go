@@ -9,7 +9,7 @@ persistent credential storage. Never ship an API key to a browser or a mobile
 app.
 
 ```bash
-go get github.com/nerova-systems/nerova-sdk-go@v0.3.0-preview.3
+go get github.com/nerova-systems/nerova-sdk-go@v0.4.0-preview.1
 ```
 
 The module path is `github.com/nerova-systems/nerova-sdk-go`, the client lives in the
@@ -20,9 +20,9 @@ or later. `go get` also resolves the module's HTTP and serialization runtime lib
 ## Versioning
 
 The SDK shares one version line with `@nerova/sdk` and `Nerova.Sdk`
-(currently `0.3.0-preview.3`). Go tags are semver, so the line is used unchanged:
-`0.3.0-preview.3` is the tag `v0.3.0-preview.3`, and `0.3.0-preview.4` will be
-`v0.3.0-preview.4`. A stable release is `v0.3.0`. Go treats pre-releases as unstable and
+(currently `0.4.0-preview.1`). Go tags are semver, so the line is used unchanged:
+`0.4.0-preview.1` is the tag `v0.4.0-preview.1`, and `0.4.0-preview.2` will be
+`v0.4.0-preview.2`. A stable release is `v0.4.0`. Go treats pre-releases as unstable and
 only picks one for `@latest` while no stable release exists. `v0.3.0-preview.1` is retracted
 in favor of `v0.3.0-preview.2`. The API surface may change before 1.0, so pin the exact
 version.
@@ -110,7 +110,7 @@ compatibility rather than errors. List endpoints paginate with `unixms|id` curso
 
 Guides, the API reference, and support contacts are on
 [docs.nerovasystems.com](https://docs.nerovasystems.com). Start with the
-[quickstart](https://docs.nerovasystems.com/getting-started/quickstart) and the
+[quickstart](https://docs.nerovasystems.com/documentation/get-started/quickstart) and the
 [SDK overview](https://docs.nerovasystems.com/sdks).
 
 This repository is a read-only distribution of the module so that the Go module proxy can

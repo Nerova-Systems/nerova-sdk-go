@@ -18,16 +18,6 @@ type V1TenantsWithTenantItemRequestBuilder struct {
 func (m *V1TenantsWithTenantItemRequestBuilder) Activation()(*V1TenantsItemActivationRequestBuilder) {
     return NewV1TenantsItemActivationRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
-// Activity the activity property
-// returns a *V1TenantsItemActivityRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Activity()(*V1TenantsItemActivityRequestBuilder) {
-    return NewV1TenantsItemActivityRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Capabilities the capabilities property
-// returns a *V1TenantsItemCapabilitiesRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Capabilities()(*V1TenantsItemCapabilitiesRequestBuilder) {
-    return NewV1TenantsItemCapabilitiesRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Channels the channels property
 // returns a *V1TenantsItemChannelsRequestBuilder when successful
 func (m *V1TenantsWithTenantItemRequestBuilder) Channels()(*V1TenantsItemChannelsRequestBuilder) {
@@ -50,16 +40,6 @@ func NewV1TenantsWithTenantItemRequestBuilder(rawUrl string, requestAdapter i2ae
     urlParams := make(map[string]string)
     urlParams["request-raw-url"] = rawUrl
     return NewV1TenantsWithTenantItemRequestBuilderInternal(urlParams, requestAdapter)
-}
-// Conversations the conversations property
-// returns a *V1TenantsItemConversationsRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Conversations()(*V1TenantsItemConversationsRequestBuilder) {
-    return NewV1TenantsItemConversationsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Employee the employee property
-// returns a *V1TenantsItemEmployeeRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Employee()(*V1TenantsItemEmployeeRequestBuilder) {
-    return NewV1TenantsItemEmployeeRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Get returns one tenant. A tenant the calling key has not been granted returns 404.
 // returns a TenantV1Responseable when successful
@@ -95,25 +75,10 @@ func (m *V1TenantsWithTenantItemRequestBuilder) Get(ctx context.Context, request
     }
     return res.(i488a15aa72bd1f794ae831fc9b44254a73a22e33a434b197990b2cb1206fb36e.TenantV1Responseable), nil
 }
-// Incidents the incidents property
-// returns a *V1TenantsItemIncidentsRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Incidents()(*V1TenantsItemIncidentsRequestBuilder) {
-    return NewV1TenantsItemIncidentsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Lifecycle the lifecycle property
 // returns a *V1TenantsItemLifecycleRequestBuilder when successful
 func (m *V1TenantsWithTenantItemRequestBuilder) Lifecycle()(*V1TenantsItemLifecycleRequestBuilder) {
     return NewV1TenantsItemLifecycleRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Mandate the mandate property
-// returns a *V1TenantsItemMandateRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Mandate()(*V1TenantsItemMandateRequestBuilder) {
-    return NewV1TenantsItemMandateRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Memory the memory property
-// returns a *V1TenantsItemMemoryRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Memory()(*V1TenantsItemMemoryRequestBuilder) {
-    return NewV1TenantsItemMemoryRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // Notifications the notifications property
 // returns a *V1TenantsItemNotificationsRequestBuilder when successful
@@ -154,11 +119,6 @@ func (m *V1TenantsWithTenantItemRequestBuilder) Patch(ctx context.Context, body 
     }
     return res.(i488a15aa72bd1f794ae831fc9b44254a73a22e33a434b197990b2cb1206fb36e.TenantV1Responseable), nil
 }
-// Performance the performance property
-// returns a *V1TenantsItemPerformanceRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Performance()(*V1TenantsItemPerformanceRequestBuilder) {
-    return NewV1TenantsItemPerformanceRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // ToGetRequestInformation returns one tenant. A tenant the calling key has not been granted returns 404.
 // returns a *RequestInformation when successful
 func (m *V1TenantsWithTenantItemRequestBuilder) ToGetRequestInformation(ctx context.Context, requestConfiguration *i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestConfiguration[i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.DefaultQueryParameters])(*i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestInformation, error) {
@@ -198,9 +158,4 @@ func (m *V1TenantsWithTenantItemRequestBuilder) Widgets()(*V1TenantsItemWidgetsR
 // returns a *V1TenantsWithTenantItemRequestBuilder when successful
 func (m *V1TenantsWithTenantItemRequestBuilder) WithUrl(rawUrl string)(*V1TenantsWithTenantItemRequestBuilder) {
     return NewV1TenantsWithTenantItemRequestBuilder(rawUrl, m.BaseRequestBuilder.RequestAdapter);
-}
-// Work the work property
-// returns a *V1TenantsItemWorkRequestBuilder when successful
-func (m *V1TenantsWithTenantItemRequestBuilder) Work()(*V1TenantsItemWorkRequestBuilder) {
-    return NewV1TenantsItemWorkRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }

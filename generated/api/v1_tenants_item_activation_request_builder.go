@@ -64,28 +64,8 @@ func (m *V1TenantsItemActivationRequestBuilder) Manifest()(*V1TenantsItemActivat
 func (m *V1TenantsItemActivationRequestBuilder) Pause()(*V1TenantsItemActivationPauseRequestBuilder) {
     return NewV1TenantsItemActivationPauseRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
-// Preview the preview property
-// returns a *V1TenantsItemActivationPreviewRequestBuilder when successful
-func (m *V1TenantsItemActivationRequestBuilder) Preview()(*V1TenantsItemActivationPreviewRequestBuilder) {
-    return NewV1TenantsItemActivationPreviewRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Provisioning the provisioning property
 // returns a *V1TenantsItemActivationProvisioningRequestBuilder when successful
 func (m *V1TenantsItemActivationRequestBuilder) Provisioning()(*V1TenantsItemActivationProvisioningRequestBuilder) {
     return NewV1TenantsItemActivationProvisioningRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Receipts the receipts property
-// returns a *V1TenantsItemActivationReceiptsRequestBuilder when successful
-func (m *V1TenantsItemActivationRequestBuilder) Receipts()(*V1TenantsItemActivationReceiptsRequestBuilder) {
-    return NewV1TenantsItemActivationReceiptsRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Reconcile the reconcile property
-// returns a *V1TenantsItemActivationReconcileRequestBuilder when successful
-func (m *V1TenantsItemActivationRequestBuilder) Reconcile()(*V1TenantsItemActivationReconcileRequestBuilder) {
-    return NewV1TenantsItemActivationReconcileRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Suspend the suspend property
-// returns a *V1TenantsItemActivationSuspendRequestBuilder when successful
-func (m *V1TenantsItemActivationRequestBuilder) Suspend()(*V1TenantsItemActivationSuspendRequestBuilder) {
-    return NewV1TenantsItemActivationSuspendRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }

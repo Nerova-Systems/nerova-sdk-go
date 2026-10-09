@@ -90,11 +90,6 @@ func (m *V1TenantsItemWebhooksWithWebhookItemRequestBuilder) Get(ctx context.Con
     }
     return res.(i488a15aa72bd1f794ae831fc9b44254a73a22e33a434b197990b2cb1206fb36e.TenantV1WebhookResponseable), nil
 }
-// Pause the pause property
-// returns a *V1TenantsItemWebhooksItemPauseRequestBuilder when successful
-func (m *V1TenantsItemWebhooksWithWebhookItemRequestBuilder) Pause()(*V1TenantsItemWebhooksItemPauseRequestBuilder) {
-    return NewV1TenantsItemWebhooksItemPauseRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // Put replaces the endpoint's URL, description, and event subscriptions. The signing secret and pinned API version are unchanged; replaying the same update is naturally idempotent.
 // returns a TenantV1WebhookResponseable when successful
 // returns a ProblemDetails error when the service returns a 400 status code
@@ -127,20 +122,10 @@ func (m *V1TenantsItemWebhooksWithWebhookItemRequestBuilder) Put(ctx context.Con
     }
     return res.(i488a15aa72bd1f794ae831fc9b44254a73a22e33a434b197990b2cb1206fb36e.TenantV1WebhookResponseable), nil
 }
-// Resume the resume property
-// returns a *V1TenantsItemWebhooksItemResumeRequestBuilder when successful
-func (m *V1TenantsItemWebhooksWithWebhookItemRequestBuilder) Resume()(*V1TenantsItemWebhooksItemResumeRequestBuilder) {
-    return NewV1TenantsItemWebhooksItemResumeRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
 // RotateSecret the rotateSecret property
 // returns a *V1TenantsItemWebhooksItemRotateSecretRequestBuilder when successful
 func (m *V1TenantsItemWebhooksWithWebhookItemRequestBuilder) RotateSecret()(*V1TenantsItemWebhooksItemRotateSecretRequestBuilder) {
     return NewV1TenantsItemWebhooksItemRotateSecretRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
-}
-// Test the test property
-// returns a *V1TenantsItemWebhooksItemTestRequestBuilder when successful
-func (m *V1TenantsItemWebhooksWithWebhookItemRequestBuilder) Test()(*V1TenantsItemWebhooksItemTestRequestBuilder) {
-    return NewV1TenantsItemWebhooksItemTestRequestBuilderInternal(m.BaseRequestBuilder.PathParameters, m.BaseRequestBuilder.RequestAdapter)
 }
 // ToDeleteRequestInformation deletes the endpoint permanently. In-flight deliveries stop; the delivery ledger keeps its history until retention expires.
 // returns a *RequestInformation when successful

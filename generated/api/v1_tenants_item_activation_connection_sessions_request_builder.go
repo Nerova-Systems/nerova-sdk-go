@@ -13,18 +13,6 @@ import (
 type V1TenantsItemActivationConnectionSessionsRequestBuilder struct {
     i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.BaseRequestBuilder
 }
-// BySessionId gets an item from the github.com/nerova-systems/nerova-sdk-go/generated.api.v1.tenants.item.activation.connectionSessions.item collection
-// returns a *V1TenantsItemActivationConnectionSessionsWithSessionItemRequestBuilder when successful
-func (m *V1TenantsItemActivationConnectionSessionsRequestBuilder) BySessionId(sessionId string)(*V1TenantsItemActivationConnectionSessionsWithSessionItemRequestBuilder) {
-    urlTplParams := make(map[string]string)
-    for idx, item := range m.BaseRequestBuilder.PathParameters {
-        urlTplParams[idx] = item
-    }
-    if sessionId != "" {
-        urlTplParams["sessionId"] = sessionId
-    }
-    return NewV1TenantsItemActivationConnectionSessionsWithSessionItemRequestBuilderInternal(urlTplParams, m.BaseRequestBuilder.RequestAdapter)
-}
 // NewV1TenantsItemActivationConnectionSessionsRequestBuilderInternal instantiates a new V1TenantsItemActivationConnectionSessionsRequestBuilder and sets the default values.
 func NewV1TenantsItemActivationConnectionSessionsRequestBuilderInternal(pathParameters map[string]string, requestAdapter i2ae4187f7daee263371cb1c977df639813ab50ffa529013b7437480d1ec0158f.RequestAdapter)(*V1TenantsItemActivationConnectionSessionsRequestBuilder) {
     m := &V1TenantsItemActivationConnectionSessionsRequestBuilder{
